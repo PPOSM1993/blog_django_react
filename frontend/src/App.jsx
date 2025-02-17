@@ -1,22 +1,26 @@
 
 //import { Button } from "./components/ui/button"
-import Header from "./ui/Header"
-import Navbar from "./ui/Navbar"
-import BlogContainer from "./ui/BlogContainer"
-import Footer from "./ui/Footer"
+//import Navbar from "./ui/Navbar"
+//import Footer from "./ui/Footer"
+import HomePage from "./pages/HomePage"
+
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import AppLayout from "./ui/AppLayout"
+import DetailPage from "./pages/DetailPage"
+import ProfilePage from "./pages/ProfilePage"
+
 function App() {
 
   return (
-    <>
-    <Navbar />
-    <Header />
-    <BlogContainer />
-    <Footer />
-
-    
-
-
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<AppLayout />}>
+          <Route index element={<HomePage />} />
+          <Route path="detail" element={<DetailPage />} />
+          <Route path="profile" element={<ProfilePage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
