@@ -1,21 +1,18 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+//import BlogContainer from "./ui_components/BlogContainer";
+//import Footer from "./ui_components/Footer";
+//import Header from "./ui_components/Header";
+//import NavBar from "./ui_components/NavBar";
+import AppLayout from "./ui/AppLayout";
+import HomePage from "./pages/HomePage";
+import DetailPage from "./pages/DetailPage";
+import ProfilePage from "./pages/ProfilePage";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-//import { Button } from "./components/ui/button"
-//import Navbar from "./ui/Navbar"
-//import Footer from "./ui/Footer"
-import HomePage from "./pages/HomePage"
+const queryClient = new QueryClient();
 
-import { BrowserRouter, Route, Routes } from "react-router-dom"
-import AppLayout from "./ui/AppLayout"
-import DetailPage from "./pages/DetailPage"
-import ProfilePage from "./pages/ProfilePage"
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
-
-const queryClient = new QueryClient()
-
-function App() {
-
+const App = () => {
   return (
-
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <Routes>
@@ -27,7 +24,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
-  )
-}
+  );
+};
 
-export default App
+export default App;

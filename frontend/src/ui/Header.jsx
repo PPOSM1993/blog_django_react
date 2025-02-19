@@ -1,5 +1,4 @@
-//import React from 'react'
-import banner from '../images/tech-girl.jpg'
+import banner from "../images/tech-girl.jpg"
 
 const Header = () => {
   return (

@@ -1,6 +1,6 @@
 import { Switch } from "@/components/ui/switch";
 import { FaHamburger } from "react-icons/fa";
-import ResponsiveNavBar from "./ResponsiveNvabar";
+import ResponsiveNavBar from "./ResponsiveNavBar";
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 const NavBar = ({darkMode, handleDarkMode}) => {

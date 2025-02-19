@@ -1,4 +1,5 @@
 import pic from "../images/pic.jpg"
+
 const BlogWriter = () => {
   return (
     <div className="flex items-center gap=4 ">
